@@ -6,35 +6,23 @@ COMPONENT STYLESHEET
 /* BASE STYLES
 ----------------------- */
 /* spacing around edge for mobile*/
-body {
-	font-size: 1.6rem;
-}
-section {
-	padding: 10px;
-}
+body { font-size: 1.6rem; }
+section { width: 100%; padding: 10px; }
 
 /* different color for utility nav*/
-section:last-child {
-	background: #efefef;
-}
+section:last-child { background: #efefef; }
 
 ul {
 	display: flex;
 	flex-flow: column nowrap;
 }
-li,
-a {
-	margin-bottom: 5px;
-}
-/* spacing between each li */
-li {
-	box-shadow: inset 0px -1px 1px -1px rgb(0 0 0 / 40%);
-	/* border-bottom: 1px ridge rgba(0,0,0,.4);	 */
-}
 
-a,
-a:link,
-a:active {
+/* spacing between each li */
+li, a { margin-bottom: 5px; }
+
+li { box-shadow: inset 0px -1px 1px -1px rgb(0 0 0 / 40%); }
+
+a, a:link, a:active {
 	box-sizing: border-box;
 	color: dimgray;
 	display: block;
@@ -48,23 +36,18 @@ a:active {
 	width: 100%;
 }
 
-li a.active,
-li a:active {
-	border-bottom: 1px ridge rgba(105, 105, 105, .8);
-}
 a:hover,
 li:hover a,
-li:hover a:link {
+li:hover a:link,
+li a.active {
 	color: white;
 	background-color: rgba(0, 0, 0, .4);
 	transition: all 2000 ease-in-out;
+	border-bottom: 1px ridge rgba(105, 105, 105, .8);
 }
 
 /* search input field */
 form {
-	width: 100%;
-	display: flex;
-	flex-flow: row nowrap;
 	justify-content: flex-end;
 	align-items: baseline;
 }
@@ -87,9 +70,9 @@ a {
 }
 
 h1 {
-	font-size: 1.875em;
+	font-size: 3rem;
 	font-weight: 200;
-	letter-spacing: 0.2em;
+	letter-spacing: 1rem
 }
 
 /* utility navigation */
@@ -97,6 +80,11 @@ section:last-child a {
 	color: hsla(0, 0%, 10%, .4);
 }
 
+
+
+/* ===========================
+	RESPONSIVE STYLES 
+	===== */	
 @media all and (min-width: 720px) {
 	/* allow content to span across entire width */
 	section {
@@ -137,7 +125,6 @@ section:last-child a {
 
 	li a.active,
 	li a:active {
-		background-color: transparent;
 		border-bottom: 1px ridge rgba(105, 105, 105, .8);
 	}
 
@@ -145,9 +132,7 @@ section:last-child a {
 		font-size: 0.75em;
 	}
 
-	nav > ul,
-	.wrapper,
-	.wrapper > ul {
+	nav > ul, .wrapper, .wrapper > ul, form {
 		width: 100%;
 		display: flex;
 		flex-flow: row nowrap;
@@ -155,9 +140,12 @@ section:last-child a {
 
 	/*	constrained the width of content*/
 	.wrapper {
+		display: flex;
 		max-width: 960px;
 		margin: 0 auto;
 		justify-content: space-between;
+		align-content: center;
+		align-items: baseline;
 	}
 
 	.wrapper > ul {

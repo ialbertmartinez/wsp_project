@@ -13,10 +13,12 @@ body {
 
 body {
 	height: 100vh;
-	background-image: url('bg.jpg');
-	background-color: rgba(102, 205, 170, .3);
+	background: url(bg.jpg);
+	background-size: cover;
 	margin: 1rem auto;
 	padding: 1rem 0.5rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	background-blend-mode: lighten;
 }
 
 .container {
@@ -42,11 +44,13 @@ body {
 		rgba(237, 237, 237, 1) 37%,
 		rgba(255, 255, 255, 1) 68%
 	);
-	height: 20vh;
+	height: 24vh;
 	width: 100%;
+	max-width: 400px;
 	margin-bottom: 2rem;
 	padding: 20px;
 	transition: all .25s ease-in-out;
+	box-shadow: 0.1rem 0.2rem 0.4rem 0 rgb(0 0 0 / 30%), 0 0 0.4rem 0.2rem rgb(0 0 0 / 30%);
 }
 
 header,
@@ -65,23 +69,30 @@ header,
 	padding: 0.5rem;
 }
 
+header,
+h2 { z-index: 109; }
+
+.product_img,
+img {	z-index: 89; }
+
 .grid_item p {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	z-index: 99;
 }
 
 p a,
 p a:link {
-	color: #666;
-	font: 400 normal 1.2rem/1 "Open Sans", sans-serif;
+	color: #999;
+	font: 600 normal 1.2rem/1 "Open Sans", sans-serif;
 	padding: .5rem;
 	transition: color .25s ease-in-out;
 }
 
 p a:hover,
 p a:focus {
-	color: #aaa;
+	color: #000;
 	transition: color .25s ease-in-out;
 }
 
@@ -93,7 +104,7 @@ p a:focus {
 header {
 	left: 0;
 	top: 0;
-	height: 30px;
+	height: 3rem;
 	width: 40%;
 }
 
@@ -117,11 +128,9 @@ h2 {
 	text-transform: uppercase;
 }
 
-.grid_item > p {
-	bottom: 0;
-}
+.grid_item > p { bottom: 0;}
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 502px) {
 	.container {
 		max-width: 960px;
 		padding: 2rem;
@@ -130,13 +139,18 @@ h2 {
 	}
 
 	.grid_item {
-		max-width: 300px;
-		height: 90px;
+		width: 48%;
+		max-width: 640px;
+		height: 108px;
 		margin-bottom: 1rem;
-		border-radius: 4px;
 	}
 
-	.product_img img {
-		max-height: 99%;
+	.product_img img { max-height: 99%;	}
+}
+
+@media screen and (min-width: 844px) {
+	.grid_item {
+		width: 32%;
+		max-width: 300px;
 	}
 }
