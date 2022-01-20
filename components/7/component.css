@@ -14,15 +14,17 @@ section {
 	background-size: cover;
 }
 
-blockquote, p { 
+blockquote, h1, p { 
 	color: rgba(255, 255, 255, 0.75);
 	text-align: center;	
 }
 
-blockquote {
+blockquote, h1 {
 	font: normal italic 3rem/1.5 'Bodoni Moda', serif;
 	padding-bottom: 5rem;
 }
+
+h1 { font: 600 normal 2.5rem/2 'Bodoni Moda', serif; } 
 
 p { font-size: 1.4rem; }
 
@@ -31,6 +33,6 @@ p:first-child { font-size: 1.6rem; }
 @media only screen and (min-width: 600px) {
 	blockquote { 
 		max-width: 750px; 
-		margin:auto;
+		margin: auto;
 	}
 }                       
