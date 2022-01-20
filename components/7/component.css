@@ -7,29 +7,30 @@ body {
 }
 
 section {
+	width: 100%;
 	padding: 5rem;
 	text-align: center;
 	background-image:url('bg.png');
-	/* background-image: linear-gradient(to bottom, rgba(18, 19, 20, .7) 0%, rgba(18, 19, 20,.9) 100%),  url('bg.jpg') no-repeat right top; */
 	background-size: cover;
 }
-blockquote, h1, p { color: rgba(255, 255, 255, 0.75); }
+
+blockquote, p { 
+	color: rgba(255, 255, 255, 0.75);
+	text-align: center;	
+}
+
 blockquote {
-	font: normal 1em/1.5 'Bodoni Moda', serif;
+	font: normal italic 3rem/1.5 'Bodoni Moda', serif;
 	padding-bottom: 5rem;
-	font-size: 3rem;
-	font-style: italic;
 }
-h1 {
-	font-size: 1.6rem;
-	text-transform: uppercase;
-}
-p {
-	font-size: 1.4rem;
-	text-align: center;  
-}
+
+p { font-size: 1.4rem; }
+
+p:first-child { font-size: 1.6rem; }
+
 @media only screen and (min-width: 600px) {
-	blockquote {
-		text-align: center;
+	blockquote { 
+		max-width: 750px; 
+		margin:auto;
 	}
 }                       
