@@ -9,6 +9,32 @@ COMPONENT STYLESHEET
 body { font-size: 1.6rem; }
 section { width: 100%; padding: 10px; }
 
+ #header { 
+	display: block;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	transform:rotateX(90deg);
+	padding: 1rem 4rem;
+}
+
+#header h1 {
+	display: block;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	transform:rotateX(90deg);
+	padding: 1rem 4rem;
+	/* margin: 0 auto; */
+	width: 120px;
+	text-align: left;
+	font: 400 normal 1.6rem/2 'Source Sans Pro', sans-serif;
+	color:rgb(0 0 0 / 30%);
+}
+
+
 /* different color for utility nav*/
 section:last-child { background: #efefef; }
 
@@ -64,12 +90,12 @@ input {
 ----------------------- */
 
 /* uppercase for all text */
-h1,
+h2,
 a {
 	text-transform: uppercase;
 }
 
-h1 {
+h2 {
 	font-size: 3rem;
 	font-weight: 200;
 	letter-spacing: 1rem

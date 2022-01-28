@@ -6,6 +6,17 @@ body {
 	background: rgb(18, 19, 20);
 }
 
+#header {
+	padding: 1rem 4rem;
+	margin: 0 auto;
+	min-width: 100%;
+}
+#header h1 {
+	text-align: left;
+	font: 400 normal 1.6rem/2 'Source Sans Pro', sans-serif;
+	color:rgb(255 255 255 / 30%);
+}
+
 section {
 	width: 100%;
 	padding: 5rem;
@@ -19,12 +30,12 @@ blockquote, h1, p {
 	text-align: center;	
 }
 
-blockquote, h1 {
+blockquote, h2 {
 	font: normal italic 3rem/1.5 'Bodoni Moda', serif;
 	padding-bottom: 5rem;
 }
 
-h1 { font: 600 normal 2.5rem/2 'Bodoni Moda', serif; } 
+h2 { font: 600 normal 2.5rem/2 'Bodoni Moda', serif; } 
 
 p { font-size: 1.4rem; }
 

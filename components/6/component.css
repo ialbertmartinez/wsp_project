@@ -5,15 +5,25 @@
 body{ font-size: 1.6rem;}
 * { box-sizing: border-box; }
 
+#header {
+	padding: 1rem 4rem;
+	margin: 0 auto;
+	min-width: 100%;
+}
+#header h1 {
+	text-align: left;
+	font: 400 normal 1.6rem/2 'Source Sans Pro', sans-serif;
+	color:rgb(255 255 255 / 30%);
+}
 /* TYPOGRAPHY */
-h1, body, p, a, a:link { 
+h2, body, p, a, a:link { 
 	color: white;
 	text-decoration: none;	
 	font-family: 'Roboto Mono', monospace;
 	text-align: center;
 }
 
-h1 { 
+h2 { 
 	font: 900 normal 2.5rem/2 "Open Sans", sans-serif; 
 	text-transform: uppercase;
 	letter-spacing: .3rem;
@@ -92,7 +102,7 @@ header a.url_link, header a.url_link:link, .url_link a, .url_link a:link {
 
 /* Responsive Styles */
 @media screen and (min-width: 380px) {
-	h1 { 
+	h2 { 
 		font-size: 3.5rem;
 		line-height: 3;
 	}

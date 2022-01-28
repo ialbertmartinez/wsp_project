@@ -9,9 +9,20 @@ COMPONENT 9 STYLESHEET
 
 /* base font */
 body {
-	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 1.6;
 	color: rgba(0 0 0 / 50%);
+}
+
+
+#header {
+	padding: 1rem 4rem;
+	margin: 0 auto;
+	min-width: 100%;
+}
+#header h1 {
+	text-align: left;
+	font: 400 normal 1.6rem/2 'Source Sans Pro', sans-serif;
+	color:rgb(0 0 0 / 30%);
 }
 
 /* headings + cta */
@@ -44,25 +55,29 @@ h3 { font-size: 2.7rem; }
 	padding: 3rem;
 }
 
-section form {
+form {
 	background: #131313;
+	margin-bottom: 0;
+	padding-bottom: 2rem;
 }
+
 
 /* general form input */
 form input {
-    border: 1px solid #0f0f0f;
+    border: 1px solid #272727;
     margin-bottom: 3rem;
-    padding: 1rem 1.3rem;
+    padding: 1rem 2rem;
     font-size: 1.6rem;
     border-radius: 6px;
+	 line-height: 2;
 	 transition: all 0.25s ease-out;
 }
 
-/* email input field */
+/* email input field
 form input[type="email"] {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-}
+} */
 
 /* email input field hover */
 form input[type="email"]:hover {
@@ -96,17 +111,16 @@ form input[type="email"]:focus {
 form input[type="button"] {
 	color: white;
 	font-weight: 400;
-	background: linear-gradient(180deg, #313131 26%, #000000 100%);
-	box-shadow: 0 -2px 1px 0 rgb(255 255 255 / 50%), 0 0 4px 1px rgb(1 1 1 / 30%);
-	border: 1px solid inset rgb(255 255 255 / 40%);
+	background: #000000;
+	box-shadow: 0 -1px 1px 0 rgb(255 255 255 / 50%), 0 0 4px 1px rgb(1 1 1 / 30%);
+	border: 1px inset rgb(255 255 255 / 40%);
 	transition: all 0.25s ease-in;
+	padding: 1.3rem 2rem;
 }
 /* subscribe button hover */
 form input[type="button"]:hover {
-	background: linear-gradient(0deg, #313131 26%, #000000 100%);
-	/* background: #4d4d4d; */
-	
-	box-shadow: 0 1px 1px 0 #fff, 0 0 2px 1px rgb(0 0 0 / 50%);
+	background: #313131;
+	box-shadow: 0 1px 1px 0 #fff, 0 0 2px 0 rgb(0 0 0 / 50%);
 	transition: all 0.25s ease-in;
 }
 
@@ -147,17 +161,24 @@ RESPONSIVE STYLES
 		left: 33%;
 	}
 	
+	h2 {
+		line-height: 2;
+	}
 	/* position form */
 	form {
 		max-width: 44%;
 		position: absolute;
 		top: 104%;
 		left: 57%;
-		padding: 0 3% 7.6% 3%;
+		padding: 1rem 2rem
+	}
+
+	form p, form input[type="button"] {
+		margin-bottom: 4rem;
 	}
 
 	form input[type="button"] {
 		letter-spacing: 0.1rem;
-		padding: 7% 0%;
+		padding: 1.3rem 2rem;
 	}
 }

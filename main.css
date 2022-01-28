@@ -94,27 +94,7 @@ header a[href*="linkedin"] {
 	header span {
 		display: inline;
 		font-size: 1.3rem
-	}
-	
-	/* style and position header links */
-	header a, header a:link {
-		font-size: 1.6rem;
-/*		transition: all .25s ease-in-out;*/
-	}
-	/* position of header list items */
-	header nav, header nav li, header > ul li {
-		
-	}
-	/* position ul + download link */
-	header > ul, header a[title*="Download"] {
-		
-	}
-	
-
-	header span {
-		padding-top: .5rem;
-	}
-		
+	}		
 }
 /* clear fix */
 header::after, header ul::after, header ul::before {
